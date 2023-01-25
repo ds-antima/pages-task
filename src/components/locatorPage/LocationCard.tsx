@@ -31,12 +31,12 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
 
   return (
     <div className={`location result`} id={`result-${result.index}`}>
-      <h3 className="">{result.rawData.name} 
-      </h3>
+      <a href={result.rawData.slug}><h3 className="">{result.rawData.name} 
+      </h3></a>
       {/* <p className="text-sm text-slate-700">{address.line1}</p>
       <p className="text-sm text-slate-700">{address.city}, {address.region}, {address.postalCode} </p> */}
       <Address address={address} />
-      <GetDirection/>
+      
     </div >
   );
 }
