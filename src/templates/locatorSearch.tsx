@@ -6,6 +6,8 @@ import { SearchHeadlessProvider, useSearchActions } from "@yext/search-headless-
 import PageLayout from "../components/layouts/PageLayout";
 import SearchLayout from "../components/locatorPage/SearchLayout";
 import {  AnswerExperienceConfig  } from "../config/globalConfig";
+import Header from "../components/layouts/header";
+import Footer from "../components/layouts/footer";
 
 export const getPath: GetPath<TemplateProps> = () => {
   return `/locatorSearch`;
@@ -50,7 +52,7 @@ const providerOptions: google.maps.MapOptions = {
 
 return (
     <>
-  
+         <Header/>
         <SearchHeadlessProvider
             experienceKey={AnswerExperienceConfig.experienceKey}
             locale={AnswerExperienceConfig.locale}
@@ -61,8 +63,10 @@ return (
             endpoints={AnswerExperienceConfig.endpoints}         
         >
            <SearchLayout/>           
-        </SearchHeadlessProvider>   
+        </SearchHeadlessProvider>  
+        <Footer/>
     </>
+
   );
 };
 

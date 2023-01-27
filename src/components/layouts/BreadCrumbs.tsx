@@ -13,7 +13,7 @@ const BreadCrumbs = (props:any) => {
     );
   
     breadcrumbs = parents.map((crumb:any) => (
-      <div className="space-x-2">
+      <div className="bg-violet-600	">
         <a className="font-bold hover:underline" href={baseUrl + crumb.slug+'.html'}>{crumb.name}</a>
         <span>{'>'}</span>
       </div>
@@ -21,7 +21,7 @@ const BreadCrumbs = (props:any) => {
   }
 
   return (
-    <div className="section flex gap-x-2">
+    <div className="section flex gap-x-2" >
       {breadcrumbs}
       {name}
     </div>

@@ -19,6 +19,7 @@ import {
   import "../index.css";
   import Header from "../components/layouts/header";
   import Footer from "../components/layouts/footer";
+  import Hours from "../components/commons/hours";
   
   /**
    * Required when Knowledge Graph data is used for a template.
@@ -36,7 +37,8 @@ import {
         "address",
         "photoGallery",
         "c_locationAddress",
-        "slug"
+        "slug",
+        "hours"
 
       ],
       // Defines the scope of entities that qualify for this stream.
@@ -127,7 +129,9 @@ import {
       address,
       photoGallery,
       c_locationAddress,
-      slug
+      slug,
+      hours
+      
       
     } = document;
     // const images = photoGallery.map((img:any)=>{
@@ -144,15 +148,27 @@ import {
                 <div className="grid grid-cols-2 gap-x-10 gap-y-10">
                   
                   
-                  <div className="bg-gray-100 p-2">
+                  <div className="bg-neutral-800 p-2">
                     <p>{`name: ${name}`}</p>
                   </div>
-                  <div className="bg-gray-100 p-2">
+                  <div className="bg-amber-100 p-2">
                     <p>{`address : ${address.line1}`}</p>
                   </div>  
-                  <div className="bg-gray-100 p-2">
-                    <p>{`about: ${c_locationAddress.description}`}</p>
+          
+                  <div className="bg-amber-100 p-2">
+                    <p>{`City: ${address.city}`}</p>
                   </div>
+                 
+                  <div className="bg-amber-100 ">
+                    <p>{`State: ${address.region}`}</p>
+                  </div>
+                  <div className="bg-amber-100">
+                    <p>{`About: ${c_locationAddress.description}`}</p>
+                  </div>
+                  <div>Opening time : <Hours hours={hours}/></div>
+                 
+                 
+                  
                   </div>            
                {/* <div className="bg-gray-100">{images}</div>  */}
             </div>

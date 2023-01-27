@@ -22,9 +22,9 @@
 
 
 /* Base */
-html {
+/* html {
     @apply bg-bg-color text-text-color text-base;
-}
+} */
 body, button, input, optgroup, select, textarea {
     @apply font-main-text-font
 }
@@ -109,9 +109,9 @@ body {
 }
 
 /* Search */
-.search-block {
+/* .search-block {
     @apply bg-bg-color sticky top-0 lg:pr-2.5 z-10
-}
+} */
 .search-block .title{
     @apply text-lg font-title-text-font
 }
@@ -120,9 +120,9 @@ body {
     @apply relative
 }
 
-.search-form input {
+/* .search-form input {
     @apply py-2.5 px-2.5 leading-6 h-auto bg-bg-color text-text-color border border-primary-btn-bg-color rounded
-}
+} */
 
 .search-form .button {
     @apply absolute top-0 right-0 py-2.5 px-2.5 leading-6 h-auto border border-b-primary-btn-bg-color rounded-tr rounded-br

@@ -44,28 +44,28 @@ const SearchLayout = (): JSX.Element => {
 
   const onLoadData = () =>{
         
-      // if (navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition(function (position) {                
-      //     searchActions.setUserLocation({
-      //       latitude:position.coords.latitude,
-      //       longitude:position.coords.longitude
-      //     });
-      //     setCenterLatitude(position.coords.latitude);
-      //     setCenterLongitude(position.coords.longitude);
-      //     searchActions.setVerticalLimit(limit);
-      //     searchActions.executeVerticalQuery();
-      //     }, function(error) {
-      //       if (error.code == error.PERMISSION_DENIED){
-      //       searchActions.setUserLocation({
-      //         latitude:centerLatitude,
-      //         longitude:centerLongitude
-      //       });
-      //       searchActions.setVerticalLimit(limit);
-      //       searchActions.executeVerticalQuery();
-      //     }
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {                
+          searchActions.setUserLocation({
+            latitude:position.coords.latitude,
+            longitude:position.coords.longitude
+          });
+          setCenterLatitude(position.coords.latitude);
+          setCenterLongitude(position.coords.longitude);
+          searchActions.setVerticalLimit(limit);
+          searchActions.executeVerticalQuery();
+          }, function(error) {
+            if (error.code == error.PERMISSION_DENIED){
+            searchActions.setUserLocation({
+              latitude:centerLatitude,
+              longitude:centerLongitude
+            });
+            searchActions.setVerticalLimit(limit);
+            searchActions.executeVerticalQuery();
+          }
 
-      //     });            
-      // }
+          });            
+      }
 
       searchActions.setUserLocation({
         latitude:centerLatitude,
@@ -230,16 +230,8 @@ const optionClickHandler = () =>{
                       fieldApiName: "name",
 
                     },
-                    {
-                      entityType: "location",
-                      fieldApiName: "address.line1",
-
-                    },
-                    {
-                      entityType: "location",
-                      fieldApiName: "address.line2",
-
-                    },
+                   
+                    
                     {
                       entityType: "location",
                       fieldApiName: "address.city",
@@ -250,6 +242,13 @@ const optionClickHandler = () =>{
                       fieldApiName: "address.postalCode",
 
                     },
+                    
+                    {
+                      entityType: "location",
+                      fieldApiName: "address.region",
+
+                    },
+
                     // {
                     //   entityType: "location",
                     //   fieldApiName: "builtin.location",                        

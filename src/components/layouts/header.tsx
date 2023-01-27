@@ -1,6 +1,6 @@
 import * as React from "react";
-import Cta from "./cta";
-import logo from "../../images/Prezzo_Logo_RGB_OffWhite.png";
+// import Cta from "./cta";
+// import logo from "../../images/Prezzo_Logo_RGB_OffWhite.png";
 
 type Link = {
   label: string;
@@ -47,20 +47,20 @@ const Header = () => {
 
   return (
     <>
-      <div id="header" className="header-nav">
-        <div className="container header-content">
+      <div id="header" className="header-nav" style={{color:"black",backgroundColor:"lightblue"}}>
+        <div className="container header-content" >
           <div className="header-content-left">
             <a className="button" href="#">
-              <span className="is-hidden-touch">Find a restaurant</span></a>
+              <span className="is-hidden-touch">Find my location</span></a>
             <a className="button" href="#" title="Book now">Book now</a>
           </div>
           <div className="header-content-middle">
             <a className="logo" href="/">
-              <img className="" src={logo} alt="Prezzo"/>
+              <img className="" src="https://www.mapmyindia.com/blog/wp-content/uploads/2010/09/mapmyindia-logo.jpg" />
             </a>
           </div>
-          <div class="header-content-right lg:hidden">
-            <span class="navbar-burger burger" data-target="navbarMenu">
+          <div className="header-content-right lg:hidden">
+            <span className="navbar-burger burger" data-target="navbarMenu">
               <span></span>
               <span></span>
               <span></span>

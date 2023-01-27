@@ -33,17 +33,17 @@ const Footer = () => {
 
    return (
       <>
-         <footer className="footer">
+         <footer className="footer" style={{color:"black",backgroundColor:"lightblue"}}>
             <div className="container">
                <div className="footerLogo">
                   <a className="logo" href="/">
-                     <img className="" src={logo} alt="Prezzo" />
+                     {/* <img className="" src={logo} alt="Prezzo" /> */}
                   </a>
                </div>
                <div className="footer_links">
                   <div className="column">
                      <a href="/" target="_self" title="Prezzo" rel="noreferrer">
-                        <img src={pizzaLogo} alt="Logo" className="fadein imgFinal"/>
+                        <img src="https://www.mapmyindia.com/blog/wp-content/uploads/2010/09/mapmyindia-logo.jpg" className="fadein imgFinal"/>
                      </a>
                      <div className="social-media">
                         <a href="#" target="_blank" title="Facebook" rel="noreferrer"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -52,9 +52,9 @@ const Footer = () => {
                      </div>
                   </div>
                   <div className="column">
-                     <h5>About Prezzo</h5>
+                     <h5>About</h5>
                      <ul>
-                        <li><a href="https://jobs.prezzorestaurants.co.uk/" title="Careers">Careers</a></li>
+                        {/* <li><a href="https://jobs.prezzorestaurants.co.uk/" title="Careers">Careers</a></li> */}
                         <li><a href="/community-commitments/" title="Community Commitments">Community Commitments</a></li>
                         <li><a href="/health/hub/" title="Health Hub">Health Hub</a></li>
                         <li><a href="/offers/" title="Offers">Offers</a></li>
